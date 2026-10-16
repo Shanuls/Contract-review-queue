@@ -33,3 +33,35 @@
   background: #ffffff;
   box-sizing: border-box;
 }
+
+.toast-message {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+  background: #1f2937;
+  color: #ffffff;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+.undo-btn {
+  background: transparent;
+  color: #c4b5fd;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.undo-btn:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+

@@ -1,3 +1,26 @@
+
+const commonKeyTerms = {
+  paymentTerms: "Net 30 days",
+  contractDuration: "12 months",
+  renewalTerms: "Subject to review",
+  terminationNotice: "30 days",
+};
+
+const createContract = (contract) => ({
+  ...contract,
+  keyTerms: {
+    ...commonKeyTerms,
+    ...(contract.keyTerms || {}),
+  },
+  auditHistory: [
+    {
+      action: "Contract submitted",
+      note: "Initial submission",
+      timestamp: `${contract.dueDate}T09:00:00`,
+    },
+  ],
+});
+
 export const contracts = [
   {
     id: "C-1042",
@@ -6,7 +29,7 @@ export const contracts = [
     priority: "High",
     status: "In review",
     amount: 6500000,
-    dueDate: "2026-10-14"
+    dueDate: "2026-10-14",
   },
   {
     id: "C-1043",
@@ -15,7 +38,7 @@ export const contracts = [
     priority: "Medium",
     status: "New",
     amount: 250000,
-    dueDate: "2026-10-20"
+    dueDate: "2026-10-20",
   },
   {
     id: "C-1044",
@@ -24,7 +47,7 @@ export const contracts = [
     priority: "High",
     status: "Blocked",
     amount: 8000000,
-    dueDate: "2026-10-15"
+    dueDate: "2026-10-15",
   },
   {
     id: "C-1045",
@@ -33,7 +56,7 @@ export const contracts = [
     priority: "Low",
     status: "In review",
     amount: 50000,
-    dueDate: "2026-10-25"
+    dueDate: "2026-10-25",
   },
   {
     id: "C-1046",
@@ -42,7 +65,7 @@ export const contracts = [
     priority: "Medium",
     status: "Approved",
     amount: 4500000,
-    dueDate: "2026-10-10"
+    dueDate: "2026-10-10",
   },
   {
     id: "C-1047",
@@ -51,7 +74,7 @@ export const contracts = [
     priority: "High",
     status: "New",
     amount: 7200000,
-    dueDate: "2026-10-12"
+    dueDate: "2026-10-12",
   },
   {
     id: "C-1048",
@@ -60,7 +83,7 @@ export const contracts = [
     priority: "Medium",
     status: "In review",
     amount: 1800000,
-    dueDate: "2026-10-18"
+    dueDate: "2026-10-18",
   },
   {
     id: "C-1049",
@@ -69,7 +92,7 @@ export const contracts = [
     priority: "Low",
     status: "New",
     amount: 120000,
-    dueDate: "2026-10-22"
+    dueDate: "2026-10-22",
   },
   {
     id: "C-1050",
@@ -78,7 +101,7 @@ export const contracts = [
     priority: "High",
     status: "In review",
     amount: 7800000,
-    dueDate: "2026-10-13"
+    dueDate: "2026-10-13",
   },
   {
     id: "C-1051",
@@ -87,7 +110,7 @@ export const contracts = [
     priority: "Low",
     status: "Rejected",
     amount: 85000,
-    dueDate: "2026-10-11"
+    dueDate: "2026-10-11",
   },
   {
     id: "C-1052",
@@ -96,7 +119,7 @@ export const contracts = [
     priority: "High",
     status: "New",
     amount: 5100000,
-    dueDate: "2026-10-16"
+    dueDate: "2026-10-16",
   },
   {
     id: "C-1053",
@@ -105,7 +128,7 @@ export const contracts = [
     priority: "Medium",
     status: "In review",
     amount: 950000,
-    dueDate: "2026-10-21"
+    dueDate: "2026-10-21",
   },
   {
     id: "C-1054",
@@ -114,7 +137,7 @@ export const contracts = [
     priority: "High",
     status: "Blocked",
     amount: 6800000,
-    dueDate: "2026-10-09"
+    dueDate: "2026-10-09",
   },
   {
     id: "C-1055",
@@ -123,7 +146,7 @@ export const contracts = [
     priority: "Low",
     status: "New",
     amount: 320000,
-    dueDate: "2026-10-27"
+    dueDate: "2026-10-27",
   },
   {
     id: "C-1056",
@@ -132,7 +155,7 @@ export const contracts = [
     priority: "Medium",
     status: "Approved",
     amount: 2300000,
-    dueDate: "2026-10-08"
+    dueDate: "2026-10-08",
   },
   {
     id: "C-1057",
@@ -141,7 +164,7 @@ export const contracts = [
     priority: "High",
     status: "In review",
     amount: 6200000,
-    dueDate: "2026-10-17"
+    dueDate: "2026-10-17",
   },
   {
     id: "C-1058",
@@ -150,7 +173,7 @@ export const contracts = [
     priority: "Medium",
     status: "New",
     amount: 600000,
-    dueDate: "2026-10-19"
+    dueDate: "2026-10-19",
   },
   {
     id: "C-1059",
@@ -159,7 +182,7 @@ export const contracts = [
     priority: "High",
     status: "In review",
     amount: 4900000,
-    dueDate: "2026-10-07"
+    dueDate: "2026-10-07",
   },
   {
     id: "C-1060",
@@ -168,7 +191,7 @@ export const contracts = [
     priority: "Low",
     status: "Blocked",
     amount: 450000,
-    dueDate: "2026-10-23"
+    dueDate: "2026-10-23",
   },
   {
     id: "C-1061",
@@ -177,7 +200,7 @@ export const contracts = [
     priority: "High",
     status: "New",
     amount: 5500000,
-    dueDate: "2026-10-06"
+    dueDate: "2026-10-06",
   },
   {
     id: "C-1062",
@@ -186,7 +209,7 @@ export const contracts = [
     priority: "Medium",
     status: "In review",
     amount: 750000,
-    dueDate: "2026-10-24"
+    dueDate: "2026-10-24",
   },
   {
     id: "C-1063",
@@ -195,7 +218,7 @@ export const contracts = [
     priority: "High",
     status: "New",
     amount: 8000000,
-    dueDate: "2026-10-05"
+    dueDate: "2026-10-05",
   },
   {
     id: "C-1064",
@@ -204,7 +227,7 @@ export const contracts = [
     priority: "Low",
     status: "Approved",
     amount: 280000,
-    dueDate: "2026-10-04"
+    dueDate: "2026-10-04",
   },
   {
     id: "C-1065",
@@ -213,7 +236,7 @@ export const contracts = [
     priority: "High",
     status: "In review",
     amount: 1500000,
-    dueDate: "2026-10-03"
+    dueDate: "2026-10-03",
   },
   {
     id: "C-1066",
@@ -222,7 +245,7 @@ export const contracts = [
     priority: "Medium",
     status: "New",
     amount: 420000,
-    dueDate: "2026-10-28"
+    dueDate: "2026-10-28",
   },
   {
     id: "C-1067",
@@ -231,7 +254,7 @@ export const contracts = [
     priority: "High",
     status: "Blocked",
     amount: 7500000,
-    dueDate: "2026-10-02"
+    dueDate: "2026-10-02",
   },
   {
     id: "C-1068",
@@ -240,7 +263,7 @@ export const contracts = [
     priority: "Low",
     status: "Rejected",
     amount: 180000,
-    dueDate: "2026-10-26"
+    dueDate: "2026-10-26",
   },
   {
     id: "C-1069",
@@ -249,7 +272,7 @@ export const contracts = [
     priority: "Medium",
     status: "In review",
     amount: 3200000,
-    dueDate: "2026-10-29"
+    dueDate: "2026-10-29",
   },
   {
     id: "C-1070",
@@ -258,7 +281,7 @@ export const contracts = [
     priority: "Low",
     status: "New",
     amount: 95000,
-    dueDate: "2026-10-30"
+    dueDate: "2026-10-30",
   },
   {
     id: "C-1071",
@@ -267,6 +290,6 @@ export const contracts = [
     priority: "High",
     status: "Approved",
     amount: 7900000,
-    dueDate: "2026-10-01"
-  }
-];
+    dueDate: "2026-10-01",
+  },
+].map(createContract);
