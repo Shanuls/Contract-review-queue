@@ -1,0 +1,61 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e5e9;
+}
+
+.brand h1 {
+  margin: 0;
+  color: #202733;
+  font-size: 22px;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.search-input {
+  flex: 1;
+  width: 100%;
+  max-width: 450px;
+  padding: 11px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #315fc4;
+}
+
+.shortcuts-btn {
+  padding: 10px 14px;
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.shortcuts-btn:hover {
+  background: #f5f6f8;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .search-input {
+    order: 3;
+    max-width: none;
+    flex-basis: 100%;
+  }
+}

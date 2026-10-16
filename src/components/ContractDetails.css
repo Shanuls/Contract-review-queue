@@ -1,0 +1,108 @@
+.details-panel {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.details-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e5e9;
+}
+
+.details-label {
+  color: #667085;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.details-panel h2 {
+  margin: 10px 0;
+  color: #202733;
+  font-size: 22px;
+}
+
+.details-panel h3 {
+  margin: 24px 0 12px;
+  color: #202733;
+  font-size: 16px;
+}
+
+.details-panel p {
+  color: #596576;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.details-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.details-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.details-summary span {
+  color: #667085;
+  font-size: 12px;
+}
+
+.details-summary strong {
+  color: #202733;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.audit-history {
+  padding-top: 16px;
+  border-top: 1px solid #e2e5e9;
+}
+
+@media (max-width: 500px) {
+  .details-panel {
+    padding: 16px;
+  }
+
+  .details-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contract-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.action-btn {
+  padding: 9px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #f1f5f9;
+}
+
+.action-btn.primary {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+.action-btn.primary:hover {
+  background: #4338ca;
+}

@@ -1,0 +1,51 @@
+.queue-panel {
+  background: #ffffff;
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.queue-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid #e2e5e9;
+}
+
+.queue-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #202733;
+}
+
+.queue-heading span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.contract-select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #e2e5e9;
+  cursor: pointer;
+}
+
+.contract-select:hover {
+  background: #f5f7fb;
+}
+
+.contract-select.selected {
+  background: #eef3ff;
+  box-shadow: inset 3px 0 #315fc4;
+}
+
+.empty-queue {
+  padding: 24px;
+  text-align: center;
+  color: #667085;
+}

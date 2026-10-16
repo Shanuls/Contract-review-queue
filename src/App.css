@@ -1,0 +1,35 @@
+.app {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #202733;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(350px, 1.4fr);
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
+
+.details-column {
+  min-width: 0;
+}
+
+.details-search {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
